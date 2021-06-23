@@ -1,25 +1,46 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View, TextInput } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
 
 export default function App() {
-  const [outputText, setOutputText] = useState("This text will be change soon");
   return (
     <View style={{
-      padding: 50
+      padding: 50,
+      flexDirection: 'row',
+      width: '100%',
+      height: 300,
+      justifyContent: 'space-between',
+      alignItems: 'stretch'
     }}>
-      <View style={{
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center'
-      }}>
-        <TextInput placeholder="Course Goal" style={{ width: '80%', borderBottomColor: 'black', borderWidth: 2, padding: 10 }} />
-        <Button title="ADD" />
+      <View
+        style={{
+          backgroundColor: 'red',
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Text>1</Text>
+      </View>
+      <View
+        style={{
+          backgroundColor: 'blue',
+          flex: 2,
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Text>2</Text>
+      </View>
+      <View
+        style={{
+          backgroundColor: 'green',
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+      >
+        <Text>3</Text>
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-
-});
